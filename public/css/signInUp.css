@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+:root {
+    --blue: #00a8e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.message {
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.message.success {
+    background-color: greenyellow;
+}
+
+.message.error {
+    background-color: lightcoral;
+}
+
+.form-title-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+form .field-container:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.field-container {
+    position: relative;
+    width: 100%;
+}
+
+.field-container input {
+    width: 100%;
+    outline: none;
+    padding: 15px 20px;
+    transition: .3s;
+}
+
+.field-container input:focus {
+    border: 1px solid var(--blue);
+}
+
+.field-container .placeholder {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: .3s;
+}
+
+.field-container input:focus ~ .placeholder,
+.field-container input:valid ~ .placeholder {
+    top: -8px;
+    left: 15px;
+    padding: 0px 5px;
+    font-size: 13px;
+    background-color: white;
+}
+
+.account-links-container {
+    margin-bottom: 20px;
+}
+
+.account-links-container a {
+    color: var(--blue);
+}
+
+.button-container {
+    width: 100%;
+}
+
+.button-container input {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 0px;
+    border: 1px solid var(--blue);
+    transition: .2s;
+}
+
+.button-container input:hover {
+    color: white;
+    background-color: var(--blue);
+}

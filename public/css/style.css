@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+:root {
+    --blue: #00a8e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto; 
+    padding: 0px 50px;
+}
+
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    padding: 20px 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.links-container li a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#sign-in {
+    transition: .1s;
+}
+
+#sign-in:hover {
+    color: var(--blue);
+} 
+
+#sign-up {
+    color: white;
+    background-color: var(--blue);
+}
+
+#account-container {
+    display: none;
+    position: relative;
+}
+
+#account {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #dedede;
+}
+
+#account-options-container {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 1000;
+}
+
+#account-container:hover #account-options-container{
+    display: block;
+}
+
+#account-options-container #account-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#account-options-container:hover{
+    display: block;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-section .card { 
+    margin-top: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    background-color: #dedede;
+    padding-top: 100%;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.card .card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-info-container > *:last-child {
+    margin-bottom: 10px;
+}
+
+.card-info-container .info-brand {
+    color: #9a9a9a;
+}
+
+.card-info-container .info-name {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.card-info-container .info-price {
+    /* font-weight: normal; */
+    color: black;
+}
